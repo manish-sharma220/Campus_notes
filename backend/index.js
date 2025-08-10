@@ -36,7 +36,7 @@ app.use(cookieParser());
 // app.use(limiter);
 
 // CORS Configuration
-const allowedOrigins = ['http://localhost:5173'];
+const allowedOrigins = ['http://localhost:5173','https://campus-notes-1ita.vercel.app'];
 
 app.use(cors({
   origin: function (origin, callback) {
