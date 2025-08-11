@@ -179,7 +179,7 @@ const Profile = () => {
   const handleNotesDelete = async (uploadingId) => {
     if (window.confirm("Are you sure you want to delete this note?")) {
       try {
-        const res = await fetch(`/api/uploading/delete/${uploadingId}`, {
+        const res = await fetch(`https://campus-notes-r1in.onrender.com/api/uploading/delete/${uploadingId}`, {
           method: "DELETE",
         });
         const data = await res.json();
