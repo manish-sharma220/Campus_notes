@@ -129,7 +129,7 @@ const Profile = () => {
     setActiveTab("uploads");
     try {
       setShowUploadsErrors(false);
-      const res = await fetch(`/api/user/uploads/${currentUser._id}`);
+      const res = await fetch(`https://campus-notes-r1in.onrender.com/api/user/uploads/${currentUser._id}`);
       const data = await res.json();
       if (data.success === false) {
         setShowUploadsErrors(true);
