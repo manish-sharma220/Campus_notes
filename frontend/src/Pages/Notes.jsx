@@ -30,7 +30,7 @@ const Notes = () => {
 
   const handleArchive = async (noteId) => {
     try {
-      const res = await fetch(`/api/notes/archive/${noteId}`, {
+      const res = await fetch(`https://campus-notes-r1in.onrender.com/api/notes/archive/${noteId}`, {
         method: "POST",
         credentials: "include",
       });
@@ -62,7 +62,7 @@ const Notes = () => {
     if (!editedCommentText.trim()) return;
 
     try {
-      const res = await fetch(`/api/notes/comments/${notes._id}/${commentId}`, {
+      const res = await fetch(`https://campus-notes-r1in.onrender.com/api/notes/comments/${notes._id}/${commentId}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -99,7 +99,7 @@ const Notes = () => {
       return;
 
     try {
-      const res = await fetch(`/api/notes/comments/${notes._id}/${commentId}`, {
+      const res = await fetch(`https://campus-notes-r1in.onrender.com/api/notes/comments/${notes._id}/${commentId}`, {
         method: "DELETE",
         credentials: "include",
       });
@@ -127,7 +127,7 @@ const Notes = () => {
     const fetchNotes = async () => {
       try {
         setLoading(true);
-        const res = await fetch(`/api/uploading/get/${params.notesId}`);
+        const res = await fetch(`https://campus-notes-r1in.onrender.com/api/uploading/get/${params.notesId}`);
         const data = await res.json();
 
         if (data.success === false) {

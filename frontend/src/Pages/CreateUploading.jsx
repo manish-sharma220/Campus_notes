@@ -270,8 +270,8 @@ const CreateUploading = () => {
       // Determine if we're creating or updating
       const isUpdate = Boolean(params.updateId);
       const endpoint = isUpdate
-        ? `/api/uploading/update/${params.updateId}`
-        : "/api/uploading/create";
+        ? `https://campus-notes-r1in.onrender.com/api/uploading/update/${params.updateId}`
+        : "https://campus-notes-r1in.onrender.com/api/uploading/create";
 
       // Send the request
       const res = await fetch(endpoint, {
