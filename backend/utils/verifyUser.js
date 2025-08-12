@@ -42,6 +42,7 @@ import jwt from "jsonwebtoken";
 export const verifyToken = (req, res, next) => {
   try {
     let token;
+    console.log("Cookies:", req.cookies);
  
     // Check token from cookies
     if (req.cookies && req.cookies.access_token) {
